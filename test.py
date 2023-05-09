@@ -19,6 +19,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import GaussianNB
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import confusion_matrix, roc_curve, precision_recall_curve, mean_squared_error, mean_absolute_error
+from sklearn.metrics import confusion_matrix, plot_confusion_matrix
 
 
 
@@ -367,7 +368,24 @@ st.write("Mean Squared Error:", mse)
 mae = mean_absolute_error(y_true, y_pred)
 st.write("Mean Absolute Error:", mae)
 
+st.write('''
+Here we are Assuming you have trained and evaluated a decision tree model and obtained the predicted 
+-labels and true labels for Instantiate the decision tree classifier , by Fitting the model on the training data
+-by Predicting the labels for the test data and computing the confusion matrix
+''')
+st.info("The following we are predicting and plottong a confusion matrix for predicted label and true label for the decision tree model algoritham")
 
+clf = DecisionTreeClassifier()  # Instantiate the decision tree classifier
+clf.fit(X_train, y_train)  # Fit the model on the training data
+y_pred = clf.predict(X_test)  # Predict the labels for the test data
+cm = confusion_matrix(y_test, y_pred)  # Compute the confusion matrix
+
+st.write("Confusion Matrix:")
+st.write(cm)
+
+plot_confusion_matrix(clf, X_test, y_test)  # Plot the confusion matrix
+st.pyplot(plt.show()) # Show the plot
+  
 
 
 
