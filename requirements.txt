@@ -1,4 +1,5 @@
 alabaster @ file:///home/ktietz/src/ci/alabaster_1611921544520/work
+altair==5.0.0
 anaconda-client @ file:///C:/ci/anaconda-client_1635342725944/work
 anaconda-navigator==2.1.1
 anaconda-project @ file:///tmp/build/80754af9/anaconda-project_1626085644852/work
@@ -27,6 +28,7 @@ bitarray @ file:///C:/ci/bitarray_1629133068652/work
 bkcharts==0.2
 black==19.10b0
 bleach @ file:///tmp/build/80754af9/bleach_1628110601003/work
+blinker==1.6.2
 bokeh @ file:///C:/ci/bokeh_1635306491714/work
 boto==2.49.0
 boto3==1.26.86
@@ -76,6 +78,8 @@ fonttools==4.25.0
 fsspec @ file:///tmp/build/80754af9/fsspec_1636116461911/work
 future @ file:///C:/ci/future_1607568713721/work
 gevent @ file:///C:/ci/gevent_1628273776273/work
+gitdb==4.0.10
+GitPython==3.1.31
 glob2 @ file:///home/linux1/recipes/ci/glob2_1610991677669/work
 greenlet @ file:///C:/ci/greenlet_1628888275363/work
 h5py @ file:///C:/ci/h5py_1622088609188/work
@@ -178,15 +182,18 @@ ply==3.11
 poyo @ file:///tmp/build/80754af9/poyo_1617751526755/work
 prometheus-client @ file:///tmp/build/80754af9/prometheus_client_1623189609245/work
 prompt-toolkit @ file:///tmp/build/80754af9/prompt-toolkit_1633440160888/work
+protobuf==4.23.0
 psutil @ file:///C:/ci/psutil_1612298199233/work
 ptyprocess @ file:///tmp/build/80754af9/ptyprocess_1609355006118/work/dist/ptyprocess-0.7.0-py2.py3-none-any.whl
 py @ file:///tmp/build/80754af9/py_1607971587848/work
+pyarrow==12.0.0
 pyasn1==0.5.0
 pyasn1-modules==0.3.0
 pycodestyle @ file:///tmp/build/80754af9/pycodestyle_1615748559966/work
 pycosat==0.6.3
 pycparser @ file:///tmp/build/80754af9/pycparser_1594388511720/work
 pycurl==7.44.1
+pydeck==0.8.1b0
 pydocstyle @ file:///tmp/build/80754af9/pydocstyle_1621600989141/work
 pyerfa @ file:///C:/ci/pyerfa_1621560974055/work
 pyflakes @ file:///tmp/build/80754af9/pyflakes_1617200973297/work
@@ -194,6 +201,7 @@ Pygments @ file:///tmp/build/80754af9/pygments_1629234116488/work
 PyJWT @ file:///C:/ci/pyjwt_1619682721924/work
 pylint @ file:///C:/ci/pylint_1627536884966/work
 pyls-spyder==0.4.0
+Pympler==1.0.1
 PyNaCl @ file:///C:/ci/pynacl_1607612759007/work
 pyodbc===4.0.0-unsupported
 pyOpenSSL @ file:///tmp/build/80754af9/pyopenssl_1635333100036/work
@@ -233,6 +241,7 @@ scikit-learn @ file:///C:/ci/scikit-learn_1622739499047/work
 scikit-learn-intelex==2021.20210714.120553
 scipy @ file:///C:/ci/scipy_1630606917240/work
 seaborn @ file:///tmp/build/80754af9/seaborn_1629307859561/work
+semver==3.0.0
 Send2Trash @ file:///tmp/build/80754af9/send2trash_1632406701022/work
 simplegeneric==0.8.1
 singledispatch @ file:///tmp/build/80754af9/singledispatch_1629321204894/work
@@ -256,6 +265,7 @@ spyder @ file:///C:/ci/spyder_1636480369575/work
 spyder-kernels @ file:///C:/ci/spyder-kernels_1634237096710/work
 SQLAlchemy @ file:///C:/ci/sqlalchemy_1626948551162/work
 statsmodels==0.12.2
+streamlit==1.8.0
 sympy @ file:///C:/ci/sympy_1635219088507/work
 tables==3.6.1
 TBB==0.2
@@ -274,12 +284,14 @@ tornado @ file:///C:/ci/tornado_1606924294691/work
 tqdm @ file:///tmp/build/80754af9/tqdm_1635330843403/work
 traitlets @ file:///tmp/build/80754af9/traitlets_1632522747050/work
 typed-ast @ file:///C:/ci/typed-ast_1624953797214/work
-typing-extensions @ file:///tmp/build/80754af9/typing_extensions_1631814937681/work
+typing_extensions==4.5.0
 tzdata==2023.3
+tzlocal==4.3
 ujson @ file:///C:/ci/ujson_1611259568517/work
 unicodecsv==0.14.1
 Unidecode @ file:///tmp/build/80754af9/unidecode_1614712377438/work
 urllib3==1.26.7
+validators==0.20.0
 watchdog @ file:///C:/ci/watchdog_1624955113064/work
 wcwidth @ file:///Users/ktietz/demo/mc3/conda-bld/wcwidth_1629357192024/work
 webencodings==0.5.1
