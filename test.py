@@ -181,7 +181,7 @@ plt.ylabel('Number of Vehicles')
 st.pyplot(plt.show())
 
 st.write('Here we are computing the correlation matrix by generating the heatmap of the correlatin matrix')
-dataset = dataset.fillna(dataset.mean())
+
 
 st.info("The following is the heat map of the correlation matrix")
 corr_matrix = dataset.corr()
