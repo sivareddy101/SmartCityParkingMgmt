@@ -235,7 +235,10 @@ mae = mean_absolute_error(y_test, y_pred)
 st.write('Mean Squared Error:', mse)
 st.write('Mean Absolute Error:', mae)
 
-st.write('Here we are performing the Decision Tree classifieer for finding the accuracy')
+st.write('''
+-Here we are performing the Decision Tree classifieer for finding the accuracy by 
+-Assuming you have split your data into training and testing sets and created X_train, y_train, X_test, y_test variables
+''')
 
 st.info("The following is the accuracy for finding the occupency using the DecisionTreeClassifier")
 dt = DecisionTreeClassifier(random_state=42)
@@ -244,7 +247,10 @@ y_pred = dt.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 st.write("Accuracy:", accuracy)
 
-st.write('Here we are performing the RandomForest classifieer for finding the accuracy')
+st.write('''
+-Here we are performing the RandomForest classifieer for finding the accuracy by 
+-Assuming you have split your data into training and testing sets and created X_train, y_train, X_test, y_test variables
+ ''')
 
 st.info("The following is the accuracy for finding the occupency using the RandomForestClassifier")
 rf = RandomForestClassifier(random_state=42)
@@ -253,4 +259,16 @@ y_pred = rf.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 st.write("Accuracy:", accuracy)
 
-         
+st.write('''
+-Here we are performing the LogisticRegression for finding the accuracy by 
+-Assuming you have split your data into training and testing sets and created X_train, y_train, X_test, y_test variables
+''')
+st.info("The following is the accuracy for finding the occupency using the LogisticRegression")
+# Assuming you have split your data into training and testing sets and created X_train, y_train, X_test, y_test variables
+lr = LogisticRegression()  # Instantiate the logistic regression model
+lr.fit(X_train, y_train)  # Fit the model on the training data
+y_pred = lr.predict(X_test)  # Predict the labels for the test data
+accuracy = accuracy_score(y_test, y_pred)  # Compute the accuracy score
+
+st.write("Accuracy:", accuracy)
+
