@@ -395,7 +395,7 @@ cm = confusion_matrix(y_test, y_pred)  # Compute the confusion matrix
 st.write("Confusion Matrix:")
 st.write(cm)
 
-plot_confusion_matrix(clf, X_test, y_test)  # Plot the confusion matrix
+ConfusionMatrixDisplay(clf, X_test, y_test)  # Plot the confusion matrix
 st.pyplot(plt.show()) # Show the plot
   
 
