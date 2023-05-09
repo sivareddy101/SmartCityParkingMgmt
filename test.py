@@ -240,8 +240,14 @@ st.write('Here we are performing the Random forest classifieer for finding the a
 
 st.info("The following is the accuracy for finding the occupency using the RandomForestClassifier")
 
-rf = RandomForestClassifier(n_estimators=100, random_state=42)
-rf.fit(X_train, y_train)
+from sklearn.tree import DecisionTreeClassifier
 
-         
+dt = DecisionTreeClassifier(random_state=42)
+dt.fit(X_train, y_train)
+
+y_pred = dt.predict(X_test)
+
+accuracy = accuracy_score(y_test, y_pred)
+print("Accuracy:", accuracy)
+
          
