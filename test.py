@@ -44,7 +44,11 @@ st.subheader("🧼 Step III: Cleaning the dataset")
 st.info("At this step, we are about to clean the dataset...")
 st.warning("Here are some facts about the dataset:")
 st.info('Number of rows')
-st.write(dataset.shape[0])
+st.success(dataset.shape[0])
 st.info('Number of columns')
-st.write(dataset.shape[1])
+st.success(dataset.shape[1])
+# Find the missing values in the dataset
+missing_values = dataset.isna().sum()
+st.warning("Here are the missing values:", icon="⚠️")
+st.error(missing_values)
 
