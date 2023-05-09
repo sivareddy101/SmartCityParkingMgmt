@@ -239,6 +239,7 @@ st.write('Mean Absolute Error:', mae)
 st.write('Here we are performing the Random forest classifieer for finding the accuracy')
 
 st.info("The following is the accuracy for finding the occupency using the RandomForestClassifier")
+
 rf = RandomForestClassifier(n_estimators=100, random_state=42)
 rf.fit(X_train, y_train)
 
