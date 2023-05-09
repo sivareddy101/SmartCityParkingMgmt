@@ -5,7 +5,7 @@ import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
 import os
 import matplotlib.pyplot as plt
 from matplotlib.image import imread
-
+import holidays
 
 ## ignore warnings 
 import warnings
@@ -70,5 +70,35 @@ plt.ylabel('Average Occupancy')
 # Display the chart
 st.write("Group the data by weather condition and compute the average occupancy for each group")
 st.set_option('deprecation.showPyplotGlobalUse', False)
+st.pyplot(plt.show())
+
+st.write('''
+Assuming you have read in the dataset and created a DataFrame called dataset. 
+Assuming you have read in the dataset and created a DataFrame called dataset
+- We first shouldd efine the holidays for your country and then create a new column in the dataset to indicate whether the date is a holiday or not
+- Also we should create a subset of the dataset that only includes data from holidays
+- and finally # Group the data by date and calculate the mean occupancy for each holiday.
+''')
+st.info("The following is a plot of the occupancy for each holiday using a bar chart ")
+# Assuming you have read in the dataset and created a DataFrame called dataset
+dataset['datetime'] = pd.to_datetime(dataset['datetime'], format='%Y-%m-%d_%H.%M')
+
+
+
+# Assuming you have read in the dataset and created a DataFrame called dataset
+# Define the holidays for your country
+us_holidays = holidays.US()
+# Create a new column in the dataset to indicate whether the date is a holiday or not
+dataset['holiday'] = dataset['datetime'].apply(lambda x: x in us_holidays)
+# Create a subset of the dataset that only includes data from holidays
+holiday_dataset = dataset[dataset['holiday']]
+# Group the data by date and calculate the mean occupancy for each holiday
+holiday_occupancy = holiday_dataset.groupby('datetime')['occupancy'].mean()
+# Plot the occupancy for each holiday using a bar chart
+plt.bar(holiday_occupancy.index, holiday_occupancy)
+plt.title('Average Occupancy during Holidays')
+plt.xlabel('Holiday Date')
+plt.ylabel('Average Occupancy')
+plt.xticks(rotation=45)
 st.pyplot(plt.show())
 
