@@ -69,5 +69,6 @@ plt.xlabel('Weather Condition')
 plt.ylabel('Average Occupancy')
 # Display the chart
 st.write("Group the data by weather condition and compute the average occupancy for each group")
+st.set_option('deprecation.showPyplotGlobalUse', False)
 st.pyplot(plt.show())
 
