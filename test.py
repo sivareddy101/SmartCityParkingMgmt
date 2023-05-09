@@ -282,7 +282,7 @@ Here we are performing the GaussianNB for finding the accuracy by Assuming you h
  ''')
 
 st.info("The following is the accuracy for finding the occupency using the GaussianNB")
-nb = GaussianNB(random_state=42)
+nb = GaussianNB()
 nb.fit(X_train, y_train)
 
 y_pred = nb.predict(X_test)
