@@ -21,7 +21,6 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import confusion_matrix, roc_curve, precision_recall_curve, mean_squared_error, mean_absolute_error
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.metrics import confusion_matrix
 from sklearn.metrics import plot_confusion_matrix
 
 
