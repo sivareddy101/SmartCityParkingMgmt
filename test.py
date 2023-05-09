@@ -102,3 +102,12 @@ plt.ylabel('Average Occupancy')
 plt.xticks(rotation=45)
 st.pyplot(plt.show())
 
+st.info("The following is a plot for predecting the mena occupency for the holidays and non holidays using a bar chart')
+mean_holiday_occupancy = dataset[dataset['holiday'] == True]['occupancy'].mean()
+mean_non_holiday_occupancy = dataset[dataset['holiday'] == False]['occupancy'].mean()
+# Plot the data
+fig, ax = plt.subplots()
+ax.bar(['Holiday', 'Non-Holiday'], [mean_holiday_occupancy, mean_non_holiday_occupancy])
+ax.set_ylabel('Mean Occupancy')
+ax.set_title('Mean Occupancy for Holidays and Non-Holidays')
+plt.show()
