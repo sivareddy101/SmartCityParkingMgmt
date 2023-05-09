@@ -18,6 +18,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import GaussianNB
 from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import confusion_matrix, roc_curve, precision_recall_curve, mean_squared_error, mean_absolute_error
 
 
 
@@ -323,7 +324,48 @@ plt.ylabel('Accuracy')
 # Display the bar chart
 st.pyplot(plt.show())
 
+##Using confusion_matrix, roc_curve, precision_recall_curve, mean_squared_error, mean_absolute_error
+st.subheader("👨🏾‍💻 Step VI: PERFORMING CONFUSION MATRIX FOR DIFFERENT ALGORITHAMS")
 
+st.write('''
+Here we are performing the confusion mayrix.roc_curve,precision_recall_curve,mean_squared_error, mean_absolute_error
+-by  assuming y_true and y_pred are your ground truth and predicted labels, respectively
+-for a binary classification problem confusion matrix, ROC curve,Precision-Recall curve,assuming
+-y_true and y_pred are your ground truth and predicted values, respectively for a regression problem
+- mean squared error and mean absolute error
+''')
+st.info("Here we are predicting and plotting the confusion matrix,roc curve,precision recall curve,Mean Squared Error Mean Absolute Error")
+ 
+y_true = np.array(y_test)  # Convert to numpy array
+y_pred = np.array(y_pred)  # Convert to numpy array
+
+cm = confusion_matrix(y_true, y_pred)
+print("Confusion Matrix:\n", cm)
+# ROC curve
+fpr, tpr, thresholds = roc_curve(y_true, y_pred)
+plt.plot(fpr, tpr)
+plt.xlabel("False Positive Rate")
+plt.ylabel("True Positive Rate")
+plt.title("ROC Curve")
+st.pyplot(plt.show())
+
+# Precision-Recall curve
+precision, recall, thresholds = precision_recall_curve(y_true, y_pred)
+plt.plot(recall, precision)
+plt.xlabel("Recall")
+plt.ylabel("Precision")
+plt.title("Precision-Recall Curve")
+st.pyplot(plt.show())
+
+# assuming y_true and y_pred are your ground truth and predicted values, respectively
+# for a regression problem
+# mean squared error
+mse = mean_squared_error(y_true, y_pred)
+st.write("Mean Squared Error:", mse)
+
+# mean absolute error
+mae = mean_absolute_error(y_true, y_pred)
+st.write("Mean Absolute Error:", mae)
 
 
 
