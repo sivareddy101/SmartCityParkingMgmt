@@ -200,3 +200,38 @@ st.info("Here converting categorical into numerical form for performing upcoming
 weather_mapping = {'S': 0, 'C': 1, 'R': 2, 'O': 3}
 dataset['weather'] = dataset['weather'].map(weather_mapping)
 
+st.write('''
+Here we are Splitting the dataset into training and testing sets, and defining the features and 
+-target variable creating the feature matrix and target array for the training set 
+-Creating the feature matrix and target array for the testing set Training a linear regression model
+-Making predictions on the testing set and evaluate the performance of the model
+
+st.info("Here we are finding the Mean Squared Error and Mean Absolute Error")
+train_data, test_data = train_test_split(dataset, test_size=0.2, random_state=42)
+
+# Define the features and target variable
+features = ['day', 'hour', 'minute', 'month', 'weather','year']
+target = 'occupancy'
+
+# Create the feature matrix and target array for the training set
+X_train = train_data[features]
+y_train = train_data[target]
+
+# Create the feature matrix and target array for the testing set
+X_test = test_data[features]
+y_test = test_data[target]
+
+# Train a linear regression model
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# Make predictions on the testing set
+y_pred = model.predict(X_test)
+
+# Evaluate the performance of the model
+mse = mean_squared_error(y_test, y_pred)
+mae = mean_absolute_error(y_test, y_pred)
+
+st.write('Mean Squared Error:', mse)
+st.write('Mean Absolute Error:', mae)
+
