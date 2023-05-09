@@ -265,7 +265,7 @@ st.write('''
 ''')
 st.info("The following is the accuracy for finding the occupency using the LogisticRegression")
 # Assuming you have split your data into training and testing sets and created X_train, y_train, X_test, y_test variables
-lr = LogisticRegression()  # Instantiate the logistic regression model
+lr = LogisticRegression(random_state=42)  # Instantiate the logistic regression model
 lr.fit(X_train, y_train)  # Fit the model on the training data
 y_pred = lr.predict(X_test)  # Predict the labels for the test data
 accuracy = accuracy_score(y_test, y_pred)  # Compute the accuracy score
