@@ -15,6 +15,7 @@ from sklearn.tree import DecisionTreeRegressor
 from sklearn.metrics import accuracy_score
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
 
 ## ignore warnings 
 import warnings
