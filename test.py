@@ -6,6 +6,7 @@ import os
 import matplotlib.pyplot as plt
 from matplotlib.image import imread
 import holidays
+import seaborn as sns
 
 ## ignore warnings 
 import warnings
@@ -179,8 +180,15 @@ plt.xlabel('Week')
 plt.ylabel('Number of Vehicles')
 st.pyplot(plt.show())
 
-        
+st.write('Here we are computing the correlation matrix by generating the heatmap of the correlatin matrix')
 
+st.info("The following is the heat map of the correlation matrix")
+corr_matrix = dataset.corr()
+
+# Generate a heatmap of the correlation matrix
+sns.heatmap(corr_matrix, annot=True, cmap='coolwarm')
+plt.title('Correlation Matrix')
+st.pyplot(plt.show())
 
 
 
