@@ -131,4 +131,20 @@ ax.set_ylabel('Mean Occupancy')
 ax.set_title('Mean Occupancy by Day of Week')
 st.pyplot(plt.show())
 
+st.write('''
+Here in this we are grouping the data by day and count the number of entries for each day and 
+-finding the day with the highest number of entries form the dataset
+''')
+st.info("The following is the presenting the busiest day of the month from the data set by using the line chart")
+entries_by_day = dataset.groupby('day')['camera'].count()
+
+# Create a line chart to visualize the results
+plt.plot(entries_by_day.index, entries_by_day.values)
+
+# Set the chart title and axis labels
+plt.title('Number of Entries by Day')
+plt.xlabel('Day')
+plt.ylabel('Number of Entries')
+st.pyplot(plt.show())
+
 
