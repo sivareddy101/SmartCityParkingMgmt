@@ -14,6 +14,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.metrics import accuracy_score
+from sklearn.tree import DecisionTreeClassifier
 
 
 
@@ -236,11 +237,11 @@ mae = mean_absolute_error(y_test, y_pred)
 st.write('Mean Squared Error:', mse)
 st.write('Mean Absolute Error:', mae)
 
-st.write('Here we are performing the Random forest classifieer for finding the accuracy')
+st.write('Here we are performing the Decision Tree classifieer for finding the accuracy')
 
-st.info("The following is the accuracy for finding the occupency using the RandomForestClassifier")
+st.info("The following is the accuracy for finding the occupency using the DecisionTreeClassifier")
 
-from sklearn.tree import DecisionTreeClassifier
+
 
 dt = DecisionTreeClassifier(random_state=42)
 dt.fit(X_train, y_train)
