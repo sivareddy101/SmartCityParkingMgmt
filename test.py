@@ -113,4 +113,22 @@ ax.set_ylabel('Mean Occupancy')
 ax.set_title('Mean Occupancy for Holidays and Non-Holidays')
 st.pyplot(plt.show())
 
+st.write('''
+Here we are converting the datatime column into the datatime data type column and also we are grouping 
+-the data by the day of the week and calculating the mean occupency
+''')
+st.info("The following is the mean occupency by the day of week by using the bar chart")
+dataset['datetime'] = pd.to_datetime(dataset['datetime'])
+
+
+mean_occupancy_by_day = dataset.groupby(dataset['datetime'].dt.day_name())['occupancy'].mean()
+
+# Plot the data
+fig, ax = plt.subplots()
+mean_occupancy_by_day.plot(kind='bar', ax=ax)
+ax.set_xlabel('Day of Week')
+ax.set_ylabel('Mean Occupancy')
+ax.set_title('Mean Occupancy by Day of Week')
+st.pyplot(plt.show())
+
 
