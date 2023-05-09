@@ -20,10 +20,10 @@ st.subheader("📊 Step I: Raw Data")
 # Create a text element and let the reader know the data is loading.
 data_load_state = st.text('Loading data...')
 # Load 10,000 rows of data into the dataframe.
-#data = load_dataset(10)
+data = pd.read_excel('./dataset/parking.xlsx')
 # Notify the reader that the data was successfully loaded.
 data_load_state.text('Loading data...done!')
-st.write(data)
+st.write(data.head(10))
     
 ## Showcasing raw data 
 st.subheader("📈 Step II: EDA Process & Visualization")
