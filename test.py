@@ -196,7 +196,7 @@ st.write('''
 This type of mapping is useful for converting categorical data into a numerical form
 -that can be more easily analyzed or used as input to machine learning algorithms
 ''')
-st.info("Here converting categorical into numerical form")
+st.info("Here converting categorical into numerical form for performing upcoming operations")
 weather_mapping = {'S': 0, 'C': 1, 'R': 2, 'O': 3}
 dataset['weather'] = dataset['weather'].map(weather_mapping)
 
