@@ -14,7 +14,6 @@ from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.metrics import accuracy_score
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.tree import RandomForestClassifier
 
 
 ## ignore warnings 
