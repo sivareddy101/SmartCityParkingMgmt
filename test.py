@@ -205,6 +205,7 @@ Here we are Splitting the dataset into training and testing sets, and defining t
 -target variable creating the feature matrix and target array for the training set 
 -Creating the feature matrix and target array for the testing set Training a linear regression model
 -Making predictions on the testing set and evaluate the performance of the model
+''')
 
 st.info("Here we are finding the Mean Squared Error and Mean Absolute Error")
 train_data, test_data = train_test_split(dataset, test_size=0.2, random_state=42)
