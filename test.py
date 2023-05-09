@@ -111,6 +111,6 @@ fig, ax = plt.subplots()
 ax.bar(['Holiday', 'Non-Holiday'], [mean_holiday_occupancy, mean_non_holiday_occupancy])
 ax.set_ylabel('Mean Occupancy')
 ax.set_title('Mean Occupancy for Holidays and Non-Holidays')
-plt.show()
+st.pyplot(plt.show())
 
 
