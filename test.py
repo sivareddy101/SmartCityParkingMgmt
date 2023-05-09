@@ -154,4 +154,4 @@ Here we are grouping the data by date and time and compute the total occupancy f
 st.info("The following we are predicting the busiest date and time from the dataset")
 occupancy_by_date_time = dataset.groupby(['day', 'month', 'year', 'hour'])['occupancy'].sum()
 busiest_date_time = occupancy_by_date_time.idxmax()
-print("The busiest day and time is: {}-{}-{} {}:00".format(busiest_date_time[0], busiest_date_time[1], busiest_date_time[2], busiest_date_time[3]))
+st.write("The busiest day and time is: {}-{}-{} {}:00".format(busiest_date_time[0], busiest_date_time[1], busiest_date_time[2], busiest_date_time[3]))
