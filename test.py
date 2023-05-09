@@ -236,3 +236,16 @@ mae = mean_absolute_error(y_test, y_pred)
 st.write('Mean Squared Error:', mse)
 st.write('Mean Absolute Error:', mae)
 
+st.write('Here we are performing the Random forest classifieer for finding the accuracy')
+
+st.info("The following is the accuracy for finding the occupency using the RandomForestClassifier")
+rf = RandomForestClassifier(n_estimators=100, random_state=42)
+rf.fit(X_train, y_train)
+ y_pred = rf.predict(X_test)
+
+accuracy = accuracy_score(y_test, y_pred)
+st.write("Accuracy:", accuracy)
+         
+         
+         
+         
