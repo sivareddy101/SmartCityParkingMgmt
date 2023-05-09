@@ -240,14 +240,9 @@ st.write('Mean Absolute Error:', mae)
 st.write('Here we are performing the Decision Tree classifieer for finding the accuracy')
 
 st.info("The following is the accuracy for finding the occupency using the DecisionTreeClassifier")
-
-
-
 dt = DecisionTreeClassifier(random_state=42)
 dt.fit(X_train, y_train)
-
 y_pred = dt.predict(X_test)
-
 accuracy = accuracy_score(y_test, y_pred)
 st.write("Accuracy:", accuracy)
 
