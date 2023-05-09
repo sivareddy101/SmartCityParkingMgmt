@@ -307,6 +307,26 @@ y_pred = knn.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 st.write("Accuracy:", accuracy)
 
+st.write('''
+Here we are assuming that having a list of algorithm names and their corresponding accuracy scores
+-Create a bar chart using the algorithm names as x-axis labels and accuracy scores as y-axis values
+-Setting chart title and labels for the x- and y-axes and we are displaying the bar chart
+''')
+st.info("Here we are drawing the bar chart for the accuracy of the above all algorithams")
+algos = ['Logistic Regression', 'Decision Tree', 'Random Forest', 'Gaussian Naive Bayes', 'K-Nearest Neighbors']
+accuracy_scores = [0.66, 0.88, 0.88, 0.66, 0.87]
+plt.bar(algos, accuracy_scores)
+plt.title('Accuracy Scores for Different Algorithms')
+plt.xlabel('Algorithm')
+plt.ylabel('Accuracy')
+
+# Display the bar chart
+st.pyplot(plt.show())
+
+
+
+
+
 
 
 
