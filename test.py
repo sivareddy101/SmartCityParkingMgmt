@@ -103,7 +103,7 @@ plt.xticks(rotation=45)
 st.pyplot(plt.show())
 
 
-# Calculate mean occupancy for holidays and non-holidays
+st.info("Calculate mean occupancy for holidays and non-holidays")
 mean_holiday_occupancy = dataset[dataset['holiday'] == True]['occupancy'].mean()
 mean_non_holiday_occupancy = dataset[dataset['holiday'] == False]['occupancy'].mean()
 # Plot the data
