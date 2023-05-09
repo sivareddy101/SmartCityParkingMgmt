@@ -69,7 +69,6 @@ plt.title('Average Vehicle Occupancy by Weather Condition')
 plt.xlabel('Weather Condition')
 plt.ylabel('Average Occupancy')
 # Display the chart
-st.write("Group the data by weather condition and compute the average occupancy for each group
-")
+st.write("Group the data by weather condition and compute the average occupancy for each group")
 st.pyplot(figure1)
 
