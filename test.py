@@ -282,7 +282,7 @@ Here we are performing the GaussianNB for finding the accuracy by Assuming you h
  ''')
 
 st.info("The following is the accuracy for finding the occupency using the GaussianNB")
-knn = KNeighborsClassifier(n_neighbors=5)
+knn = KNeighborsClassifier(random_state=42)
 knn.fit(X_train, y_train)
 
 y_pred = knn.predict(X_test)
