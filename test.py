@@ -171,7 +171,15 @@ parked_by_week = dataset.groupby(pd.Grouper(key='datetime', freq='W'))['occupanc
 # Print the results
 st.write(parked_by_week)
 
+st.write('Here we are plotting the above data for every week occupency by line chart')
+st.info("The following we are plotting the line chart for occupency for every week")
+# Plot the results
+parked_by_week.plot(kind='line', title='Number of Vehicles Parked per Week')
+plt.xlabel('Week')
+plt.ylabel('Number of Vehicles')
+st.pyplot(plt.show())
 
+        
 
 
 
