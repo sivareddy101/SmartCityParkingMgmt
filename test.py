@@ -22,7 +22,7 @@ from sklearn.metrics import confusion_matrix, roc_curve, precision_recall_curve,
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import confusion_matrix
-#from sklearn.metrics import plot_confusion_matrix
+from sklearn.metrics import plot_confusion_matrix
 
 
 
@@ -396,7 +396,7 @@ cm = confusion_matrix(y_test, y_pred)  # Compute the confusion matrix
 st.write("Confusion Matrix:")
 st.write(cm)
 
-def plot_confusion_matrix(clf, X_test, y_test)  # Plot the confusion matrix
+plot_confusion_matrix(clf, X_test, y_test)  # Plot the confusion matrix
 plt.show()  # Show the plot
 
 
