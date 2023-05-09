@@ -20,7 +20,7 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import confusion_matrix, roc_curve, precision_recall_curve, mean_squared_error, mean_absolute_error
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.metrics import plot_confusion_matrix
+#from sklearn.metrics import plot_confusion_matrix
 
 
 
@@ -399,6 +399,20 @@ from sklearn.metrics import plot_confusion_matrix
 
 plot_confusion_matrix(clf, X_test, y_test)  # Plot the confusion matrix
 plt.show()  # Show the plot
+
+
+st.write('Here we are computing the precision and recall by importing some libraries called precision_score, recall_score')
+st.info("The following we predicted the precision and recall for our dataset")
+
+# Compute precision and recall
+precision = precision_score(y_true, y_pred)
+recall = recall_score(y_true, y_pred)
+
+# Print the precision and recall
+st.write("Precision: {:.3f}".format(precision))
+st.write("Recall: {:.3f}".format(recall))
+
+
 
 
 
