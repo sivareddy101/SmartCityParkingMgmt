@@ -7,6 +7,15 @@ import matplotlib.pyplot as plt
 from matplotlib.image import imread
 import holidays
 import seaborn as sns
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error, mean_absolute_error
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.svm import SVC
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.metrics import accuracy_score
+
+
 
 ## ignore warnings 
 import warnings
@@ -179,15 +188,6 @@ parked_by_week.plot(kind='line', title='Number of Vehicles Parked per Week')
 plt.xlabel('Week')
 plt.ylabel('Number of Vehicles')
 st.pyplot(plt.show())
-
-st.write('Here we are computing the correlation matrix by generating the heatmap of the correlatin matrix')
-st.info("The following is the heat map of the correlation matrix")
-corr_matrix = dataset.corr()
-# Generate a heatmap of the correlation matrix
-sns.heatmap(corr_matrix, annot=True, cmap='coolwarm')
-plt.title('Correlation Matrix')
-st.pyplot(plt.show())
-
 
 
 
