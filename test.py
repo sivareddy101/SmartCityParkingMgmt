@@ -419,8 +419,7 @@ Here we are fitting the clf object on the training data and  Assuming that the t
 -a classifier and obtained the predicted probabilities and true labels for Obtaining the predicted 
 -probabilities of the positive class and computing the precision-recall curve and thresholds
 ''')
-st.info("The following we are computing the precision-recall curve and precision-recall curve with varying thresholds by obtaining
--the predicted probabilities and true labels")
+st.info("The following we are computing the precision-recall curve and precision-recall curve with varying thresholds by obtainingthe predicted probabilities and true labels")
 
        
 obtained the predicted probabilities and true labels
