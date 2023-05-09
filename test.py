@@ -20,6 +20,10 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import confusion_matrix, roc_curve, precision_recall_curve, mean_squared_error, mean_absolute_error
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import confusion_matrix, plot_confusion_matrix
+
+
 
 
 
@@ -369,7 +373,6 @@ st.write("Mean Squared Error:", mse)
 mae = mean_absolute_error(y_true, y_pred)
 st.write("Mean Absolute Error:", mae)
 
-from sklearn.metrics import confusion_matrix, plot_confusion_matrix
 
 st.write('''
 Here we are Assuming you have trained and evaluated a decision tree model and obtained the predicted 
