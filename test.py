@@ -20,7 +20,6 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import confusion_matrix, roc_curve, precision_recall_curve, mean_squared_error, mean_absolute_error
 from sklearn.tree import DecisionTreeClassifier
-#from sklearn.metrics import plot_confusion_matrix
 
 
 
@@ -393,6 +392,8 @@ cm = confusion_matrix(y_test, y_pred)  # Compute the confusion matrix
 
 st.write("Confusion Matrix:")
 st.write(cm)
+
+from sklearn.metrics import plot_confusion_matrix
 
 plot_confusion_matrix(clf, X_test, y_test)  # Plot the confusion matrix
 plt.show()  # Show the plot
