@@ -414,6 +414,42 @@ recall = recall_score(y_true, y_pred)
 st.write("Precision: {:.3f}".format(precision))
 st.write("Recall: {:.3f}".format(recall))
 
+st.write('''
+Here we are fitting the clf object on the training data and  Assuming that the trained and evaluated
+-a classifier and obtained the predicted probabilities and true labels for Obtaining the predicted 
+-probabilities of the positive class and computing the precision-recall curve and thresholds
+''')
+st.info("The following we are computing the precision-recall curve and precision-recall curve with varying thresholds by obtaining
+-the predicted probabilities and true labels")
+
+       
+obtained the predicted probabilities and true labels
+from sklearn.metrics import precision_recall_curve
+import matplotlib.pyplot as plt
+​
+# Fit the clf object on the training data
+clf.fit(X_train, y_train)
+​
+# Assuming you have trained and evaluated a classifier and obtained the predicted probabilities and true labels
+y_scores = clf.predict_proba(X_test)[:, 1]  # Obtain the predicted probabilities of the positive class
+precision, recall, thresholds = precision_recall_curve(y_test, y_scores)  # Compute the precision-recall curve and thresholds
+​
+# Plot the precision-recall curve
+plt.plot(recall, precision)
+plt.xlabel('Recall')
+plt.ylabel('Precision')
+plt.title('Precision-Recall Curve')
+plt.show()
+​
+# Plot the precision-recall curve with varying thresholds
+plt.plot(thresholds, precision[:-1], label='Precision')
+plt.plot(thresholds, recall[:-1], label='Recall')
+plt.xlabel('Threshold')
+plt.title('Precision-Recall Curve with Varying Thresholds')
+plt.legend()
+plt.show()
+​
+
 
 
 
