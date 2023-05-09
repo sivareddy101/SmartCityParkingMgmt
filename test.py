@@ -51,4 +51,25 @@ st.success(dataset.shape[1])
 missing_values = dataset.isna().sum()
 st.warning("Here are the missing values:", icon="⚠️")
 st.error(missing_values)
+columns_list = dataset.columns
+# Drop the "occupant_changed" column from the dataset
+dataset = dataset.drop(columns=['occupant_changed'])
+
+## Visualizing data 
+st.subheader("📉 Step IV: EDA Process- Visualizing the dataset")
+
+# Group the data by weather condition and compute the average occupancy for each group
+occupancy_by_weather = dataset.groupby('weather')['occupancy'].mean()
+
+# Create a bar chart to visualize the results
+figure1 = plt.bar(occupancy_by_weather.index, occupancy_by_weather.values)
+
+# Set the chart title and axis labels
+plt.title('Average Vehicle Occupancy by Weather Condition')
+plt.xlabel('Weather Condition')
+plt.ylabel('Average Occupancy')
+# Display the chart
+st.write("Group the data by weather condition and compute the average occupancy for each group
+")
+st.pyplot(figure1)
 
