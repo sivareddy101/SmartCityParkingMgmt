@@ -160,7 +160,7 @@ st.write('''
 Here we are convering the datatime column to  a pandas datetime format and also Grouping  the 
 -data by week and count the number of records in each group for predecting the occupency for each week
 ''')
-st.info("The following we are predicting occupency for each and evreyweek from the whole dataset")
+st.info("The following we are predicting occupency for each and every week from the whole dataset")
 dataset['datetime'] = pd.to_datetime(dataset['datetime'], format='%Y-%m-%d_%H.%M')
 # Convert the 'datetime' column to a pandas datetime format
 dataset['datetime'] = pd.to_datetime(dataset['datetime'])
