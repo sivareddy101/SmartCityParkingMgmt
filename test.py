@@ -16,10 +16,13 @@ from sklearn.metrics import accuracy_score
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
+from sklearn.naive_bayes import GaussianNB
+
 
 ## ignore warnings 
 import warnings
 warnings.filterwarnings("ignore")
+
 
 
 ## ======================================== Reusable Function Space ===========================
@@ -249,7 +252,7 @@ accuracy = accuracy_score(y_test, y_pred)
 st.write("Accuracy:", accuracy)
 
 st.write('''
--Here we are performing the RandomForest classifieer for finding the accuracy by 
+Here we are performing the RandomForest classifieer for finding the accuracy by 
 -Assuming you have split your data into training and testing sets and created X_train, y_train, X_test, y_test variables
  ''')
 
@@ -272,4 +275,22 @@ y_pred = lr.predict(X_test)  # Predict the labels for the test data
 accuracy = accuracy_score(y_test, y_pred)  # Compute the accuracy score
 
 st.write("Accuracy:", accuracy)
+
+st.write('''
+Here we are performing the GaussianNB for finding the accuracy by Assuming you have split your
+-data into training and testing sets and created X_train, y_train, X_test, y_test variables
+ ''')
+
+st.info("The following is the accuracy for finding the occupency using the GaussianNB")
+knn = KNeighborsClassifier(n_neighbors=5)
+knn.fit(X_train, y_train)
+
+y_pred = knn.predict(X_test)
+
+accuracy = accuracy_score(y_test, y_pred)
+print("Accuracy:", accuracy)
+
+
+
+
 
