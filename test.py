@@ -35,9 +35,14 @@ dataset = pd.read_excel('./dataset/parking.xlsx')
 data_load_state.text('Loading data...done!')
 st.write(dataset.head(10))
     
-## Showcasing raw data 
+## Showcasing stats 
 st.subheader("📈 Step II: Data Stats")
-st.write(dataset.info())
+st.write(dataset.describe())
 
-
+## Cleaning data 
+st.subheader("🧼 Step III: Cleaning the dataset")
+st.info("At this step, we are about to clean the dataset...")
+st.warning("Here are some facts about the dataset:")
+st.info('Number of rows: ', dataset.shape[0])
+st.info('Number of columns: ', dataset.shape[1])
 
