@@ -1,5 +1,3 @@
-%%writefile test.py
-
 # Core Pkgs
 import streamlit as st
 import os
