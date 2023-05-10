@@ -422,7 +422,7 @@ Here we are fitting the clf object on the training data and  Assuming that the t
 st.info("The following we are computing the precision-recall curve and precision-recall curve with varying thresholds by obtaining the predicted probabilities and true labels")
 
        
-obtained the predicted probabilities and true labels
+
 from sklearn.metrics import precision_recall_curve
 import matplotlib.pyplot as plt
 ​
