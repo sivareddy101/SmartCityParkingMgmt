@@ -445,7 +445,7 @@ plt.plot(thresholds, precision[:-1], label='Precision')
 plt.plot(thresholds, recall[:-1], label='Recall')
 plt.xlabel('Threshold')
 plt.title('Precision-Recall Curve with Varying Thresholds')
-st.pyplot(plt.legend())
+st.pyplot(plt.show())
 st.pyplot(plt.show())
 
 
